@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "_Layout.cshtml";
+}
+<section class="@Model.Content.StyleSelector.ToString().ToLower().Replace(" ", "-")">
+    <h1>@(Model.Content.Title ?? Model.Content.Name)</h1>
+    @Html.Raw(Model.Content.Content)
+</section>

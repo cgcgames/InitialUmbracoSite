@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    //var content = Model.Content as SeoComposition;
+    Layout = null;
+    var metaTitle = Model.Content.Name;
+
+    //if (content != null)
+    //{
+    //    metaTitle = !string.IsNullOrEmpty(content.MetaTitle) ? content.MetaTitle : metaTitle;
+    //}
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>@metaTitle</title>
+    @*@if (content != null && !string.IsNullOrEmpty(content.MetaDescription))
+    {
+        <meta name="description" content="@content.MetaDescription">
+    }*@
+</head>
+
+<body>
+    @RenderBody()
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Content>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+
+    var mediaItem = Umbraco.TypedMedia(1);
+
+    Url.GetCropUrl(mediaItem, width: 300);
+}
+<section class="@Model.Content.StyleSelector.ToString().ToLower().Replace(" ", "-")">
+    <h1>@(Model.Content.Title ?? Model.Content.Name)</h1>
+    @Html.Raw(Model.Content.Content)
+    
+    @foreach (var block in Model.Content.Blocks)
+    {
+        var content = block as Block;
+        <h2>@content.Title</h2>
+        @Html.Raw(content.RichText)
+        <a href="@content.Link.Url">@content.Link.Name</a>
+    }
+    
+    v
+</section>

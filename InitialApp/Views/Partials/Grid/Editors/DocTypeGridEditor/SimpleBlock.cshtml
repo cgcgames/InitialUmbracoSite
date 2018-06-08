@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.SimpleBlock>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+<div>
+    <h2>@Model.Content.Title</h2>
+    @Html.Raw(Model.Content.Content)
+    <a href="@Model.Content.Link.Url">@Model.Content.Link.Name</a>
+</div>

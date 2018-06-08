@@ -148,6 +148,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Our.Umbraco.DocTypeGridEditor, Version=0.5.6626.9203, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Our.Umbraco.DocTypeGridEditor.0.5.0\lib\net45\Our.Umbraco.DocTypeGridEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -251,6 +254,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\DocTypeGridEditor\Config\grid.editors.config.js" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Css\doctypegrideditor.css" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Js\doctypegrideditor.controllers.js" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Js\doctypegrideditor.directives.js" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Js\doctypegrideditor.resources.js" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Js\doctypegrideditor.services.js" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Views\doctypegrideditor.dialog.html" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Views\doctypegrideditor.html" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -274,6 +285,9 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Render\DocTypeGridEditorPreviewer.cshtml" />
+    <Content Include="App_Plugins\DocTypeGridEditor\Render\DocTypeGridEditor.cshtml" />
+    <Content Include="App_Plugins\DocTypeGridEditor\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -290,6 +304,8 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\HomeWithSideBar.cshtml" />
     <Content Include="Views\Content.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\DocTypeGridEditor\SimpleBlock.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\DocTypeGridEditor\SimpleBlockFull.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

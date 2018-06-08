@@ -1,0 +1,26 @@
+﻿<div class="dtge-dialog " ng-controller="Our.Umbraco.DocTypeGridEditor.Dialogs.DocTypeGridEditorDialog">
+
+    <div ng-switch="dialogMode">
+
+        <umb-control-group label="Choose a content type" ng-switch-when="selectDocType">
+            <select class="umb-editor" ng-change="selectDocType()" name="selectDocType" ng-model="$parent.$parent.selectedDocType" ng-options="dt as dt.name for dt in docTypes" required>
+                <option value=""><localize key="choose" />...</option>
+            </select>
+        </umb-control-group>
+
+        <div ng-switch-when="edit">
+
+            <fieldset ng-repeat="tab in model.node.tabs">
+                <legend style="font-size: 18px;">{{tab.label || tab.alias}}</legend>
+
+                <umb-property property="property"
+                              ng-repeat="property in tab.properties">
+                    <umb-editor model="property"></umb-editor>
+                </umb-property>
+
+            </fieldset>
+
+        </div>
+    </div>
+
+</div>

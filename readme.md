@@ -1,6 +1,6 @@
 ## Umbraco Grid Layout Workshop ##
 
-This repository is for a workshop on the Grid Editor, the documentation can be found: (http://www.jordanbradleyward.com/)
+This repository is for a workshop on the Grid Editor, the documentation can be found: http://www.jordanbradleyward.com/umbraco/umbraco-grid-layout-workshop/
 
 Develop branch:
 The develop branch contains the finished workshop code.
